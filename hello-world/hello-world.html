@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello Vue.js</title>
+</head>
+
+<body>
+  <!-- View -->
+  <div id="app">
+    <p>Message is: {{ message }}</p>
+    <input type="text" v-model="message">
+    <h1 v-if="yes">Yes!</h1>
+    <h1 v-if="no">No!</h1>
+    <h1 v-if="age >= 25">Age is {{age}}!</h1>
+    <h1 v-show="name == 'Yangholmes'">Name is {{name}}!</h1>
+    <h1 v-if>Nick Name is {{nickName}}!</h1>
+    <h1 v-if="sex == 1 ">Male</h1>
+    <h1 v-else>Female</h1>
+    <ul>
+      <li v-for="v in vegetables">{{v}}</li>
+  </div>
+
+  <div id="yang">
+    <yang-component v-show="flag">
+    </yang-component>
+  </div>
+  <template id="yang-component">
+    <div v-show="flag">
+      <p v-show="flag">See Me!</p>
+      <p>{{flag}}</p>
+    </div>
+  </template>
+
+  <script src="./vue/vue.js"></script>
+  <script>
+  // Model
+  var data = {
+    message: 'Hello World!',
+    yes: true,
+    no: false,
+    age: 28,
+    name: 'Yangholmes',
+    nickName: 'Yang',
+    sex: 0,
+    vegetables: [ 'carrige', 'bean', 'potato', 'tomato', 'carrot' ]
+  }
+  // instance a Vue Object
+  // or called ViewModel
+  new Vue({
+    el: '#app', // perhaps element^
+    data: data
+  });
+
+  var yangVue = new Vue({
+    el: '#yang',
+    data: {flag: true,},
+    components: {
+      'yang-component': {
+        template: '#yang-component',
+        data: function() {
+          return {flag: false};
+        }
+      }
+    }
+  })
+  </script>
+</body>
+
+
+</html>
