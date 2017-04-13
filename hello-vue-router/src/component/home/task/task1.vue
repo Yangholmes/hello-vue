@@ -2,6 +2,7 @@
   <div id="task1">
     <h1>This is Task1~</h1>
     <p>{{ msg }}</p>
+    <p>{{ $route.name }}</p>
   </div>
 </template>
 

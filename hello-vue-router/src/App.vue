@@ -2,11 +2,12 @@
   <div id="app">
     <div id="navigation">
       <el-menu default-active="/home" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true" theme="light">
-        <el-menu-item index="/home" id="logo"><img src="http://localhost:8080/dist/logo.png"></el-menu-item>
+        <el-menu-item index="/home" id="logo"><img src="http://localhost:8080/src/assets/logo.png"></el-menu-item>
         <el-menu-item index="/home">Home</el-menu-item>
         <el-menu-item index="/page">Page</el-menu-item>
         <el-menu-item index="/table">Table</el-menu-item>
         <el-menu-item index="/form">Form</el-menu-item>
+        <el-menu-item index="/vue-resource">vue-resource</el-menu-item>
       </el-menu>
     </div>
 

@@ -5,6 +5,7 @@ import home from './component/home/index.vue'
 import page from './component/page/index.vue'
 import table from './component/table/index.vue'
 import form from './component/form/index.vue'
+import vueResource from './component/vue-resource/index.vue'
 
 const routes = [
   {
@@ -53,6 +54,11 @@ const routes = [
     path: '/form',
     name: 'form',
     component: form
+  },
+  {
+    path: '/vue-resource',
+    name: 'vue-resource',
+    component: vueResource
   }
 ]
 

@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loader: 'style-loader!css-loader' // 多个loader之间用“!”连接起来
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
