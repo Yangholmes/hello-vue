@@ -124,6 +124,9 @@ export default {
 <style>
 #form {
   margin: 1em;
-  width: 50%
+  width: 50%;
+}
+.line{
+  text-align: center;
 }
 </style>

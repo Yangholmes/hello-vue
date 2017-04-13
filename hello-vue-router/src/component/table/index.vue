@@ -1,7 +1,12 @@
 <template>
   <div id="table">
     <h2>车辆预约单统计</h2>
+
+    <el-button :type="loading ? 'danger' : 'warning'" @click="loading = !loading">{{ loading ? '结束加载' : '加载' }}</el-button>
+    <el-button @click="loaded">测试事件处理</el-button>
+
     <el-table :data="reservationStatistic" border style="width: 100%"
+      v-loading="loading" element-loading-text="玩儿命加载中……"
       :default-sort = "{prop: 'id'}" fit>
       <el-table-column v-for="col in columns"
         :prop="col.prop"
@@ -17,6 +22,7 @@
 export default {
   data () {
     return {
+      loading: true,
       reservationStatistic: [
         {id: 3, createDt: '2017-03-24 11:46:19', startpoint: '无线科技大楼', endpoint: '北斗产业园', 'schedule-start': '2017-03-24 12:00:00', 'schedule-end': '2017-03-24 16:30:00', car: '红色奥德赛', applicant: '黄加华', driver: '黄加华'},
         {id: 7, createDt: '2017-03-27 16:01:13', startpoint: '无线科技大楼', endpoint: '海格产业园', 'schedule-start': '2017-03-27 16:15:00', 'schedule-end': '2017-03-27 16:45:00', car: '红色奥德赛', applicant: '黄加华', driver: '黄加华'},
@@ -34,6 +40,12 @@ export default {
         { prop: "driver", label: "司机" }
       ]
     }
+  },
+  methods:{
+    loaded: function(){
+      console.log(this.loading);
+      alert('Success');
+    }
   }
 }
 </script>
@@ -42,5 +54,8 @@ export default {
   #table{
     margin: 1em;
     text-align: center;
+  }
+  .el-button{
+    margin-bottom: 1em
   }
 </style>
