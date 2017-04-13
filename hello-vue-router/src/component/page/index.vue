@@ -1,7 +1,7 @@
 <template>
   <div id="page">
     <h1>This is Page~</h1>
-    <p>{{ page }}</p>
+    <p>{{ msg }}</p>
   </div>
 </template>
 
@@ -15,4 +15,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+#page{
+  margin: 0 auto;
+  text-align: center;
+}
+</style>

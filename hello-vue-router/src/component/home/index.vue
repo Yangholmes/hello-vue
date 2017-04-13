@@ -18,4 +18,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+#home{
+  margin: 0 auto;
+  text-align: center;
+}
+</style>
