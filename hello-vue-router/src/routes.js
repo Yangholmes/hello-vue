@@ -6,6 +6,7 @@ import page from './component/page/index.vue'
 import table from './component/table/index.vue'
 import form from './component/form/index.vue'
 import vueResource from './component/vue-resource/index.vue'
+import query from './component/query/index.vue'
 
 const routes = [
   {
@@ -59,6 +60,11 @@ const routes = [
     path: '/vue-resource',
     name: 'vue-resource',
     component: vueResource
+  },
+  {
+    path: '/query',
+    name: 'Query',
+    component: query
   }
 ]
 

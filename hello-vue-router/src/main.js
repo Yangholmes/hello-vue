@@ -10,10 +10,14 @@ Vue.use(VueRouter)
 Vue.use(ElementUI)
 Vue.use(VueResource)
 
+// Vue.http.options.emulateJSON = true
+// Vue.http.options.emulateHTTP = true;
+
 import routes from './routes.js'
 // instance a VueRouter
 const router = new VueRouter({
   mode: 'history',
+  base: __dirname,
   routes // （缩写）相当于 routes: routes
 })
 
